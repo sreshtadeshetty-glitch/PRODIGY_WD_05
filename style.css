@@ -1,0 +1,257 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Outfit',sans-serif;
+}
+
+body{
+    background:#050816;
+    color:white;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+/* BACKGROUND */
+
+.background{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    z-index:-1;
+    background:
+    radial-gradient(circle at top left,#1d4ed8,#020617 40%),
+    radial-gradient(circle at bottom right,#7c3aed,#020617 40%);
+}
+
+.blur{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(120px);
+    opacity:0.5;
+    animation:move 8s infinite alternate;
+}
+
+.blur1{
+    width:300px;
+    height:300px;
+    background:#38bdf8;
+    top:-50px;
+    left:-50px;
+}
+
+.blur2{
+    width:350px;
+    height:350px;
+    background:#8b5cf6;
+    bottom:-100px;
+    right:-100px;
+}
+
+.blur3{
+    width:250px;
+    height:250px;
+    background:#06b6d4;
+    top:50%;
+    left:40%;
+}
+
+@keyframes move{
+    from{
+        transform:translate(-20px,-20px);
+    }
+    to{
+        transform:translate(20px,20px);
+    }
+}
+
+/* CONTAINER */
+
+.container{
+    max-width:1400px;
+    margin:auto;
+    padding:25px;
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.logo{
+    font-size:2.3rem;
+    font-weight:700;
+    background:linear-gradient(to right,#38bdf8,#818cf8);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.search{
+    display:flex;
+    gap:10px;
+}
+
+.search input{
+    width:280px;
+    padding:14px;
+    border:none;
+    border-radius:15px;
+    background:rgba(255,255,255,0.08);
+    color:white;
+    outline:none;
+}
+
+.search button{
+    border:none;
+    padding:14px 20px;
+    border-radius:15px;
+    background:linear-gradient(to right,#2563eb,#06b6d4);
+    color:white;
+    cursor:pointer;
+    font-weight:600;
+}
+
+.main-card{
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.08);
+    backdrop-filter:blur(20px);
+    border-radius:30px;
+    padding:30px;
+}
+
+.top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:30px;
+}
+
+.current h1{
+    font-size:5rem;
+}
+
+.current h2{
+    font-size:2rem;
+}
+
+.current p{
+    margin-top:8px;
+    color:#cbd5e1;
+}
+
+.weather-icon{
+    font-size:7rem;
+}
+
+/* INFO GRID */
+
+.grid{
+    margin-top:30px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+    padding:20px;
+    border-radius:20px;
+    text-align:center;
+}
+
+.card h3{
+    margin-bottom:10px;
+    color:#94a3b8;
+}
+
+/* FORECAST */
+
+.section{
+    margin-top:45px;
+}
+
+.section-title{
+    font-size:1.5rem;
+    margin-bottom:20px;
+}
+
+.hourly{
+    display:flex;
+    gap:15px;
+    overflow-x:auto;
+    padding-bottom:10px;
+}
+
+.hour-card{
+    min-width:120px;
+    background:rgba(255,255,255,0.05);
+    padding:18px;
+    border-radius:20px;
+    text-align:center;
+}
+
+.daily-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+    gap:18px;
+}
+
+.day-card{
+    background:rgba(255,255,255,0.05);
+    padding:20px;
+    border-radius:20px;
+    text-align:center;
+}
+
+/* AI */
+
+.ai-box{
+    margin-top:40px;
+    background:linear-gradient(135deg,#1e3a8a,#0f172a);
+    border-radius:25px;
+    padding:25px;
+}
+
+.ai-box h2{
+    margin-bottom:15px;
+}
+
+/* POPULAR CITIES */
+
+.popular-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.popular-card{
+    background:rgba(255,255,255,0.05);
+    padding:20px;
+    border-radius:20px;
+    text-align:center;
+}
+
+@media(max-width:768px){
+
+    .current h1{
+        font-size:3.5rem;
+    }
+
+    .weather-icon{
+        font-size:5rem;
+    }
+
+    .search{
+        width:100%;
+    }
+
+    .search input{
+        width:100%;
+    }
+
+}

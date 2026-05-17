@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>AI Smart Weather</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="background">
+    <div class="blur blur1"></div>
+    <div class="blur blur2"></div>
+    <div class="blur blur3"></div>
+</div>
+
+<div class="container">
+
+    <div class="header">
+
+        <div class="logo">
+            AI Smart Weather
+        </div>
+
+        <div class="search">
+            <input type="text" id="cityInput" placeholder="Search city...">
+            <button onclick="getWeather()">Search</button>
+        </div>
+
+    </div>
+
+    <div class="main-card">
+
+        <!-- CURRENT WEATHER -->
+
+        <div class="top">
+
+            <div class="current">
+
+                <h2 id="cityName">Loading...</h2>
+
+                <h1 id="temp">--°C</h1>
+
+                <p id="condition">Weather Condition</p>
+
+                <p id="feels">
+                    Feels like --°C
+                </p>
+
+            </div>
+
+            <div class="weather-icon" id="weatherIcon">
+                ☀️
+            </div>
+
+        </div>
+
+        <!-- WEATHER INFO -->
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>Humidity</h3>
+                <p id="humidity">--%</p>
+            </div>
+
+            <div class="card">
+                <h3>Wind Speed</h3>
+                <p id="wind">-- km/h</p>
+            </div>
+
+            <div class="card">
+                <h3>Pressure</h3>
+                <p id="pressure">-- hPa</p>
+            </div>
+
+            <div class="card">
+                <h3>Visibility</h3>
+                <p id="visibility">-- km</p>
+            </div>
+
+            <div class="card">
+                <h3>UV Index</h3>
+                <p>7 High</p>
+            </div>
+
+            <div class="card">
+                <h3>Air Quality</h3>
+                <p>Moderate</p>
+            </div>
+
+        </div>
+
+        <!-- 24 HOURS -->
+
+        <div class="section">
+
+            <div class="section-title">
+                24 Hour Forecast
+            </div>
+
+            <div class="hourly" id="hourlyForecast"></div>
+
+        </div>
+
+        <!-- 7 DAYS -->
+
+        <div class="section">
+
+            <div class="section-title">
+                7 Day Forecast
+            </div>
+
+            <div class="daily-grid" id="dailyForecast"></div>
+
+        </div>
+
+        <!-- AI -->
+
+        <div class="ai-box">
+
+            <h2>
+                🤖 AI Weather Intelligence
+            </h2>
+
+            <p id="aiSuggestion">
+                AI analyzing weather conditions...
+            </p>
+
+        </div>
+
+        <!-- POPULAR CITIES -->
+
+        <div class="section">
+
+            <div class="section-title">
+                Popular Cities
+            </div>
+
+            <div class="popular-grid">
+
+                <div class="popular-card">
+                    <h3>Tokyo</h3>
+                    <p>22°C ☁️</p>
+                </div>
+
+                <div class="popular-card">
+                    <h3>London</h3>
+                    <p>16°C 🌧️</p>
+                </div>
+
+                <div class="popular-card">
+                    <h3>Dubai</h3>
+                    <p>39°C ☀️</p>
+                </div>
+
+                <div class="popular-card">
+                    <h3>Hyderabad</h3>
+                    <p>35°C 🔥</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
